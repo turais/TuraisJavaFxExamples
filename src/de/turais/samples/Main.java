@@ -1,4 +1,4 @@
-/*
+package de.turais.samples;/*
         Licensed to the Apache Software Foundation (ASF) under one
         or more contributor license agreements.  See the NOTICE file
         distributed with this work for additional information
@@ -17,7 +17,6 @@
         under the License.
  */
 
-package de.turais.samples;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -29,12 +28,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
         primaryStage.setTitle("Turais");
         primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.show();
-
-
 
     }
 

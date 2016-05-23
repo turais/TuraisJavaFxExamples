@@ -25,6 +25,7 @@ package de.turais.samples;
  */
 public class Student {
 
+    private static int studentIdAct = 0;
     private int studentId;
     private String name;
     private GENDER gender;
@@ -34,18 +35,14 @@ public class Student {
         FEMALE
     }
 
-    public Student(int studentId, String name, GENDER gender) {
-        this.studentId = studentId;
+    public Student(String name, GENDER gender) {
+        studentId = studentIdAct++;
         this.name = name;
         this.gender = gender;
     }
 
     public int getStudentId() {
         return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
     }
 
     public String getName() {
